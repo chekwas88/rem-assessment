@@ -40,7 +40,7 @@ const useDataLoad = (url: string) => {
                 return {
                     id: res.id,
                     size: res.size,
-                    allowedOnRoad: res["allowed_on_Road"],
+                    allowedOnRoad: res["allowed_on_road"],
                     allowsHeavyWaste: res["allows_heavy_waste"],
                     vat: res.vat,
                     postCode: res.postcode,

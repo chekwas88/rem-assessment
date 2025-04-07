@@ -33,3 +33,9 @@
 .card:hover{
     border-color: var(--accent);
 }
+.card.masked {
+    background-color: #f5f5f5;
+    filter: grayscale(0.5) brightness(0.9);
+    opacity: 0.7;
+    cursor: not-allowed;
+  }

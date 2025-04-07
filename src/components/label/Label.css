@@ -1,0 +1,28 @@
+.label {
+    display: inline-flex;
+    width: 80%;
+    height: .5rem;
+    align-items: center;
+    font-size: .8rem;
+    padding: 10px 16px;
+    border-radius: 8px;
+    margin: 8px 0;
+    color: white;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .label .icon {
+    margin-right: 8px;
+    font-size: 1rem;
+    margin-bottom: 0;
+  }
+  
+  .label.private {
+    background-color: #f39c12;
+  }
+  
+  .label.heavy {
+    background-color: #e74c3c;
+  }
+  

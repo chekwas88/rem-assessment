@@ -43,11 +43,13 @@ const App: React.FC = () => {
 
 
   const getFeatures = (size:number):string[] => {
-    const features = size <= 8 ? [ "🌱 80%+ recyclable waste capacity", "🌍 Best for smaller carbon footprint", "⏳ 14-day hire"]
-      : size >= 14 ? [ "🪵 Great for wood, metal, plastics", "🍃 Efficient for medium-sized loads", "⏳ 14-day hire"]
-      : ["🔄 Handles mixed materials sustainably", "🌳 Offset with 2 trees planted per skip", "⏳ 14-day hire"]
+    const features = size <= 8 ? [ "🪵 Great for wood, metal, plastics", "🍃 Efficient for medium-sized loads", "⏳ 14-day hire"]
+      : size > 8 && size <= 14 ? [ "🔄 Handles mixed materials sustainably", "🌳 Offset with 2 trees planted per skip", "⏳ 14-day hire"]
+      : ["🌱 80%+ recyclable waste capacity", "🌍 Best for smaller carbon footprint", "⏳ 14-day hire"]
     return features
   }
+
+  console.log({payload})
 
   return (
     <div className="container">
@@ -58,11 +60,13 @@ const App: React.FC = () => {
 
       
       <div className="card-grid">
-        {payload.map((p) => {
+        {payload.map(({allowedOnRoad, allowsHeavyWaste, ...p}) => {
           const skip = {
             title: `${p.size} Yard Eco-Skip`,
             totalPrice: p.vat + p.price,
-            features: getFeatures(p.size)
+            features: getFeatures(p.size),
+            allowedOnRoad,
+            allowsHeavyWaste
 
             
           }
@@ -75,6 +79,8 @@ const App: React.FC = () => {
             price={skip.totalPrice}
             isSelected={selectedSize === skip.title}
             onSelect={() => setSelectedSize(skip.title)}
+            allowedOnRoad={skip.allowedOnRoad}
+            allowsHeavyWaste={skip.allowsHeavyWaste}
           />
         )})}
       </div>
