@@ -38,4 +38,5 @@
     filter: grayscale(0.5) brightness(0.9);
     opacity: 0.7;
     cursor: not-allowed;
+    pointer-events: none;
   }

@@ -23,7 +23,6 @@ function Modal(props: React.PropsWithChildren<ModalProps>) {
     };
   }, [modalRoot]);
 
-  console.log({isOpen, modalRoot,el})
 
   if (!isOpen) return null;
 

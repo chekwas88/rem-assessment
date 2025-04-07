@@ -49,7 +49,6 @@ const App: React.FC = () => {
     return features
   }
 
-  console.log({payload})
 
   return (
     <div className="container">
