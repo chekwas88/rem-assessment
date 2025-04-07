@@ -1,0 +1,35 @@
+.card {
+    background-color: var(--card-bg);
+    border: 2px solid var(--card-border);
+    border-radius: 10px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+  
+.card.selected {
+    border-color: var(--accent);
+    background-color: var(--selected-bg);
+}
+
+  
+.card h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #2e572e;
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+.card ul li {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+}
+
+.card:hover{
+    border-color: var(--accent);
+}

@@ -1,0 +1,16 @@
+@keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+.loader {
+    animation: spin 500ms infinite linear;
+    color: gray;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #616e7c;
+    border-top-color: #cbd2d9;
+    border-right-color: #cbd2d9;
+}
